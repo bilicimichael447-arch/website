@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞石石材｜天然大理石板材与工艺品定制</title>
+    <meta name="description" content="瑞石石材 (RWIStone) - 自有黑色大理石矿山与专属加工车间，同时甄选全国优质石材资源。我们专注于石材工艺品定制与工程配套，为 B2B 客户提供高性价比的一站式石材解决方案。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0a0a0a', // Deepest black
+                            800: '#18181b', // Zinc 900
+                            gold: '#d4af37', // Classic Gold
+                            bronze: '#b45309', // Deep Bronze
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'subtle-zoom': 'subtleZoom 20s infinite alternate',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        subtleZoom: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e4e4e7;
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+            border-radius: 4px;
+        }
+
+        /* Modal specific styles for smooth transition */
+        .modal-overlay {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content-area {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.open .modal-content-area {
+            transform: scale(1);
+        }
+
+        /* 案例轮播容器，允许水平滚动，但隐藏滚动条 */
+        #gallery-carousel {
+            scroll-snap-type: x mandatory; /* 启用滚动对齐 */
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        #gallery-carousel::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        /* 轮播页面的对齐点 */
+        .carousel-page {
+            scroll-snap-align: start; 
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-600 selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12 border-b border-white/5 bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 flex items-center justify-center bg-zinc-900 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-amber-600/10 transform rotate-45 scale-0 group-hover:scale-150 transition-transform duration-500"></div>
+                    <img src="logo.jpeg" onerror="this.onerror=null;this.parentElement.innerHTML='<span class=\'text-amber-500 font-serif text-2xl\'>R</span>'">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-xl md:text-2xl font-bold tracking-widest text-white uppercase leading-none">RWI<span class="text-amber-600">STONE</span></span>
+                    <span class="text-[10px] tracking-[0.3em] text-gray-400 uppercase mt-1">Natural Stone Supply & Custom Fabrication</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#home" class="text-xs lg:text-sm uppercase tracking-widest hover:text-amber-500 transition-colors">首页</a>
+                <a href="#products" class="text-xs lg:text-sm uppercase tracking-widest hover:text-amber-500 transition-colors">产品系列</a>
+                <a href="#process" class="text-xs lg:text-sm uppercase tracking-widest hover:text-amber-500 transition-colors">工艺实录</a>
+                <a href="#gallery" class="text-xs lg:text-sm uppercase tracking-widest hover:text-amber-500 transition-colors">工程案例</a>
+                <a href="#about" class="text-xs lg:text-sm uppercase tracking-widest hover:text-amber-500 transition-colors">关于我们</a>
+                <a href="#contact" class="px-6 py-2 border border-amber-600/50 text-amber-500 hover:bg-amber-600 hover:text-black hover:border-amber-600 transition-all duration-300 uppercase text-xs tracking-widest">联系定制</a>
+
+                <div class="flex items-center gap-2 border-l border-white/20 pl-6 ml-2">
+                    <span class="text-xs font-bold text-amber-500">CN</span>
+                    <span class="text-amber-600 text-xs">/</span>
+                    <a href="index.html" class="text-xs font-bold text-gray-500 hover:text-white transition-colors">EN</a>
+                </div>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover:text-amber-500 transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-black/98 z-40 hidden flex-col items-center justify-center space-y-8 transition-opacity duration-300">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#home" class="text-2xl font-serif text-white hover:text-amber-500 tracking-wider">首页</a>
+            <a href="#products" class="text-2xl font-serif text-white hover:text-amber-500 tracking-wider">产品系列</a>
+            <a href="#process" class="text-2xl font-serif text-white hover:text-amber-500 tracking-wider">工艺实录</a>
+            <a href="#gallery" class="text-2xl font-serif text-white hover:text-amber-500 tracking-wider">案例画廊</a>
+            <a href="#about" class="text-2xl font-serif text-white hover:text-amber-500 tracking-wider">关于我们</a>
+            <a href="#contact" class="text-xl font-serif text-amber-500 border-b border-amber-500 pb-2">联系我们</a>
+
+            <div class="flex items-center gap-6 mt-8 pt-8 border-t border-white/10 w-40 justify-center">
+                <span class="text-lg font-bold text-amber-500">中文</span>
+                <span class="text-amber-600">|</span>
+                <a href="index.html" class="text-lg font-bold text-gray-500 hover:text-white">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-zinc-900">
+        <div class="absolute inset-0 z-0">
+            <img src="photo1.jpg" 
+                 onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/18181b/333?text=Luxury+Marble+Background';"
+                 alt="Natural Marble Texture" 
+                 class="w-full h-full object-cover brightness-[0.35] scale-105 animate-subtle-zoom">
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <h2 class="text-amber-500 tracking-[0.4em] uppercase text-xs md:text-sm mb-6 animate-fade-in-up border-b border-amber-500/30 inline-block pb-2">Premium Stone Collection</h2>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-tight animate-fade-in-up delay-100 drop-shadow-2xl">
+                瑞石<span class="text-amber-600">石材</span><br>
+                <span class="text-2xl md:text-4xl block mt-4 font-light tracking-widest text-gray-200">
+                    天然石材 · 专属定制
+                </span>
+                <span class="hidden">高端大理石加工与工艺品定制</span> 
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto text-base md:text-lg mb-12 font-light leading-relaxed animate-fade-in-up delay-200">
+                中国矿山甄选顶级原石，融合现代设计美学。<br class="hidden md:block">我们不只是生产石材，我们在雕刻时光的纹理。
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center animate-fade-in-up delay-300">
+                <a href="#products" class="px-10 py-4 bg-amber-700 text-white hover:bg-amber-600 transition-all shadow-[0_0_20px_rgba(180,83,9,0.3)] uppercase tracking-widest text-sm">探索产品</a>
+                <a href="#contact" class="px-10 py-4 border border-white/20 text-white hover:bg-white hover:text-black transition-all uppercase tracking-widest text-sm backdrop-blur-sm">联系我们</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+            <a href="#about" class="text-white/30 hover:text-white transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+    <section id="products" class="py-24 bg-luxury-900 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="text-amber-600 font-serif italic text-xl">Service & Products</span>
+                <h2 class="text-4xl font-serif text-white mt-2">核心业务</h2>
+                <div class="w-16 h-[1px] bg-amber-700 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden h-[450px] cursor-pointer bg-zinc-800">
+                    <img src="photo2.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/18181b/d4af37?text=Marble+Arts+Crafts';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                         alt="Marble Art">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="p-3 bg-amber-700 rounded-sm text-white"><i class="fa-solid fa-chess-knight"></i></div>
+                            <span class="text-amber-500 text-xs uppercase tracking-widest">Art Pieces</span>
+                        </div>
+                        <h3 class="text-3xl font-serif text-white mb-4">工艺品定制</h3>
+                        <p class="text-gray-300 font-light text-sm mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            从极简主义雕塑到家居装饰摆件。花瓶、托盘、艺术雕刻，每一件都是为您生活空间增添格调的艺术品。
+                        </p>
+                        <button onclick="openModal('crafts')" class="mt-2 inline-block px-8 py-3 bg-amber-700 text-white hover:bg-amber-600 transition-all shadow-lg uppercase tracking-widest text-sm font-medium">查看图册</button>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden h-[450px] cursor-pointer bg-zinc-800">
+                    <img src="photo7.jpeg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/18181b/d4af37?text=Building+Materials';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                         alt="Building Materials">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="p-3 bg-zinc-700 rounded-sm text-white group-hover:bg-amber-700 transition-colors"><i class="fa-solid fa-cubes-stacked"></i></div>
+                            <span class="text-amber-500 text-xs uppercase tracking-widest">Architecture</span>
+                        </div>
+                        <h3 class="text-3xl font-serif text-white mb-4">板材与荒料</h3>
+                        <p class="text-gray-300 font-light text-sm mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            荒料、大板等石材产品供应，支持定制加工，适用于住宅及商业空间项目。
+
+                        </p>
+                        <button onclick="openModal('materials')" class="mt-2 inline-block px-8 py-3 bg-amber-700 text-white hover:bg-amber-600 transition-all shadow-lg uppercase tracking-widest text-sm font-medium">查看选材</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="exclusive" class="py-24 relative overflow-hidden bg-black">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <img src="photo5.jpg" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/000000/333?text=Black+Marble+Texture';"
+                    alt="Black Marble Texture" 
+                    class="w-full h-full object-cover scale-110 animate-subtle-zoom">
+            </div>
+            
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-24 bg-gradient-to-b from-transparent to-amber-600/50"></div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5">
+                        <div class="inline-flex items-center gap-2 border border-amber-600/30 bg-amber-900/10 px-4 py-1.5 rounded-full mb-6 backdrop-blur-md">
+                            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                            <span class="text-amber-500 text-[10px] font-bold uppercase tracking-[0.2em]">Exclusive Quarry</span>
+                        </div>
+                        
+                        <h2 class="text-4xl md:text-5xl font-serif text-white leading-tight mb-6">
+                            黑色大理石 <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">自有矿山</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 font-light text-left">
+                            虽然我们甄选并整合多种石材资源，但这一抹黑是我们的骄傲。
+                            <strong class="text-white font-medium">RWISTONE 拥有该黑色大理石矿山的开采权。</strong>
+                            矿山开采直接加工，省去所有中间环节。
+                        </p>
+
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-gem text-amber-600 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white text-sm font-bold">极品成色</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">底色黑度高，油性足，纹理如泼墨山水般自然灵动。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-hand-holding-dollar text-amber-600 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white text-sm font-bold">源头成本</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">自有矿山直供，为生产项目提供无可比拟的价格优势。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-infinity text-amber-600 mt-1"></i>
+                                <div>
+                                    <h4 class="text-white text-sm font-bold">稳定供应</h4>
+                                    <p class="text-gray-500 text-xs mt-0.5">荒料年开采量1万立方，年加工板材20万平方，保证大工程项目及工艺品批发的连续供货。</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="#contact" class="group inline-flex items-center gap-3 text-white border-b border-amber-600 pb-1 hover:text-amber-500 transition-colors">
+                            <span class="text-sm uppercase tracking-widest">索取独家样品</span>
+                            <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-7 relative">
+                        <div class="relative z-10 border border-white/10 p-2 bg-white/5 backdrop-blur-sm transform rotate-1 hover:rotate-0 transition-transform duration-500 group cursor-zoom-in"
+                            onclick="openLightbox('photo6.jpg')">
+                            
+                            <img src="photo6.jpg" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x600/111/444?text=Our+Exclusive+Black+Marble';"
+                                class="w-full shadow-2xl"
+                                alt="Exclusive Black Marble Application">
+                            
+                            <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white border border-white/20 shadow-lg">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="absolute -top-10 -right-10 w-2/3 h-full border-2 border-amber-600/10 z-0 pointer-events-none"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    <section id="process" class="py-24 bg-zinc-950 relative border-t border-white/5">
+                
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                        <div>
+                            <span class="text-amber-600 font-serif italic text-xl">Supply Chain Control</span>
+                            <h2 class="text-3xl md:text-4xl font-serif text-white mt-2">加工基地与工艺实录</h2>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light max-w-md text-justify md:text-right">
+                            我们整合全国顶尖加工资源，驻厂团队全程监管。<br>
+                            所见即所得，用镜头记录每一个产品的诞生。
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[800px] md:h-[600px] mb-16">
+                
+                        <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-sm bg-zinc-950 cursor-zoom-in"
+                            onclick="openLightbox('photo8.png')">
+                            
+                            <img src="photo8.png" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/1000x1000/202022/333?text=Factory+View';"
+                                alt="Factory View" 
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                            
+                            <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white border border-white/20">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="md:col-span-2 relative group overflow-hidden rounded-sm bg-zinc-950 cursor-zoom-in"
+                            onclick="openLightbox('photo9.jpeg')">
+                            
+                            <img src="photo9.jpeg" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x600/202022/333?text=Cutting+&+Shaping';"
+                                alt="Cutting & Shaping" 
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                            
+                            <div class="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white border border-white/20">
+                                    <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none">
+                            </div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-sm bg-zinc-950 cursor-zoom-in"
+                            onclick="openLightbox('photo10.jpeg')">
+                            
+                            <img src="photo10.jpeg" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x600/202022/333?text=Polishing';"
+                                alt="Polishing" 
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                            <div class="absolute inset-0 border border-white/10 group-hover:border-amber-600/50 transition-colors pointer-events-none"></div>
+                        </div>
+
+                        <div class="relative group overflow-hidden rounded-sm bg-zinc-950 border border-amber-600/20 cursor-zoom-in"
+                            onclick="openLightbox(' photo11.jpeg')">
+                            
+                            <img src="photo11.jpeg" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x600/202022/333?text=QCcheck';"
+                                alt="QCcheck" 
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+
+                            <div class="absolute top-4 right-4 z-10 pointer-events-none">
+                                <span class="flex items-center gap-1 bg-amber-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                                    <i class="fa-solid fa-check-double"></i> QC CHECK
+                                </span>
+                            </div>
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">
+                                <p class="text-gray-400 text-[10px] mt-1">发货前质检，严格控制色差范围</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="border-t border-white/10 pt-10">
+                        <div class="flex flex-wrap justify-center md:justify-between gap-6 md:gap-2">
+                            
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-gray-500 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3">
+                                    <i class="fa-solid fa-earth-americas text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">原料甄选</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Selection</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-amber-600 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3 shadow-[0_0_10px_rgba(180,83,9,0.1)]">
+                                    <i class="fa-solid fa-map text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">荒料整形</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Preparation</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-gray-500 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3">
+                                    <i class="fa-solid fa-scissors text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">精准开料</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Cutting</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-gray-500 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">表面工艺</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Finishing</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-amber-600 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3 shadow-[0_0_10px_rgba(180,83,9,0.1)]">
+                                    <i class="fa-solid fa-clipboard-check text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">品质检查</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">QC Check</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-amber-600 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3 shadow-[0_0_10px_rgba(180,83,9,0.1)]">
+                                    <i class="fa-solid fa-box-open text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">安全包装</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Packing</p>
+                            </div>
+
+                            <div class="hidden md:flex items-center text-zinc-800"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="text-center group w-24 md:w-auto">
+                                <div class="w-10 h-10 mx-auto rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center text-amber-600 group-hover:text-amber-500 group-hover:border-amber-500 transition-all mb-3 shadow-[0_0_10px_rgba(180,83,9,0.1)]">
+                                    <i class="fa-solid fa-ship text-sm"></i>
+                                </div>
+                                <h4 class="text-white text-xs font-bold uppercase tracking-wider">全球交付</h4>
+                                <p class="text-zinc-600 text-[10px] mt-1 scale-90">Delivery</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+    <section id="gallery" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-12 flex justify-between items-end">
+            <div>
+                <span class="text-amber-600 font-serif italic text-xl">Showcase</span>
+                <h2 class="text-4xl font-serif text-white mt-2">工程案例</h2>
+            </div>
+            <div class="hidden md:flex">
+                <button id="gallery-toggle-btn" class="w-10 h-10 border border-white/20 text-white hover:bg-amber-600 hover:border-amber-600 transition-all flex items-center justify-center z-20">
+                    <i id="gallery-icon" class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="gallery-carousel" class="flex overflow-hidden w-full h-auto md:h-[600px]">
+            
+            <div id="gallery-page-1" class="w-full flex-shrink-0 px-4 carousel-page max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo3.jpeg')">
+                    <img src="photo3.jpeg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x800/18181b/d4af37?text=Luxury+Interior';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Living Room Wall">
+                </div>
+                <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo12.jpeg')">
+                    <img src="photo12.jpeg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/18181b/d4af37?text=Bathroom';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Marble Bathroom">
+                </div>
+                <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo13.jpeg')">
+                    <img src="photo13.jpeg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/18181b/d4af37?text=Art+Decor';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Marble Crafts">
+                </div>
+                <div class="md:col-span-2 relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo14.jpg')">
+                    <img src="photo14.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x400/18181b/d4af37?text=Kitchen+Countertop';"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Kitchen Countertop">
+                </div>
+            </div>
+
+            <div id="gallery-page-2" class="w-full flex-shrink-0 px-4 carousel-page max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo15.jpg')">
+                    <img src="photo15.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x800/27272a/d4af37?text=NEW+CASE+5 (可替换)'; "
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Case 5">
+
+                </div>
+                <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo16.jpg')">
+                    <img src="photo16.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/27272a/d4af37?text=NEW+CASE+6 (可替换)'; "
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="Case 6">
+                </div>
+                <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo17.jpg')">
+                    <img src="photo17.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/27272a/d4af37?text=NEW+CASE+7 (可替换)'; "
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="New Case 7">
+                </div>
+                <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo18.jpg')">
+                    <img src="photo18.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/27272a/d4af37?text=NEW+CASE+8 (可替换)'; "
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="New Case 8">
+                </div>
+                 <div class="relative group overflow-hidden h-[300px] md:h-full bg-zinc-800 cursor-zoom-in"
+                     onclick="openLightbox('photo19.jpg')">
+                    <img src="photo19.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/27272a/d4af37?text=NEW+CASE+9 (可替换)'; "
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                         alt="New Case 9">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-zinc-950 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative group">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-600/30 transition-all group-hover:w-full group-hover:h-full group-hover:border-amber-600/10"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-amber-600/30 transition-all group-hover:w-full group-hover:h-full group-hover:border-amber-600/10"></div>
+                    <div class="h-[500px] w-full bg-zinc-800 overflow-hidden relative">
+                        <img src="photo4.jpeg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/800x1000/27272a/d4af37?text=Artisan+Working';"
+                             alt="Marble Craftsmanship" 
+                             class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                    </div>
+                </div>
+                <div>
+                    <span class="text-amber-600 font-serif italic text-xl">Our Philosophy</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-8">匠心独运<br><span class="text-zinc-500">赋予石材生命</span></h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed font-light text-justify">
+                        我们坚信，每一块大理石都是大自然的孤本。我们的使命是通过精湛的工艺，唤醒沉睡在岩石中的灵魂。从重庆到云浮，我们拥有稳定高效的供应与加工体系。
+                    </p>
+                    <p class="text-gray-400 mb-10 leading-relaxed font-light text-justify">
+                        公司拥有2000平米现代化加工厂房以及大量合作加工厂，自有工厂配备五轴水刀切割机，16头全自动磨机和红外线桥切机等专业工具，无论是复杂的工艺品雕刻，还是大面积的工程铺贴，都能精准呈现设计意图.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
+                        <div class="text-center md:text-left">
+                            <h4 class="text-3xl text-amber-500 font-serif mb-2">17 years<span class="text-sm">+</span></h4>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">专注石材工艺</p>
+                        </div>
+
+                        <div class="text-center md:text-left">
+                            <h4 class="text-3xl text-amber-500 font-serif mb-2">100<span class="text-sm">%</span></h4>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">天然A级荒料</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="py-24 bg-zinc-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-black to-transparent pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="flex flex-col justify-center">
+                    <span class="text-amber-600 font-serif italic text-xl">Get in touch</span>
+                    <h2 class="text-4xl font-serif text-white mt-2 mb-6">开启定制之旅</h2>
+                    <p class="text-gray-400 font-light mb-10 max-w-md">
+                        我们的专业顾问将在24小时内与您联系，为您提供免费的石材选型建议与报价方案。
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-black transition-all mr-6">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-serif text-lg">公司地址</h5>
+                                <p class="text-gray-500 text-sm mt-1">广东省东莞市</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-black transition-all mr-6">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-serif text-lg">联系电话</h5>
+                                <p class="text-gray-500 text-sm mt-1">+86 189 9699 2323</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-black transition-all mr-6">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-serif text-lg">商务邮箱</h5>
+                                <p class="text-gray-500 text-sm mt-1">info@rwistone.net</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-800/20 border border-white/5 p-8 rounded-lg backdrop-blur-sm h-full flex flex-col justify-center relative">
+    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-serif text-white mb-2">业务范围</h3>
+                        <p class="text-gray-500 text-xs uppercase tracking-widest">针对不同客户的定制化服务方案</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="group relative overflow-hidden bg-zinc-900 border border-white/5 hover:border-amber-600/50 p-6 rounded transition-all duration-300">
+                            <div class="relative z-10 flex items-start gap-5">
+                                <div class="p-3 bg-black rounded text-amber-600 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-hotel"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-serif text-lg mb-1 group-hover:text-amber-500 transition-colors">工程项目投标</h4>
+                                    <p class="text-gray-400 text-sm font-light text-justify leading-relaxed">
+                                        提供从设计深化到落地交付的全流程支持。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-zinc-900 border border-white/5 hover:border-amber-600/50 p-6 rounded transition-all duration-300">
+                            <div class="relative z-10 flex items-start gap-5">
+                                <div class="p-3 bg-black rounded text-amber-600 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-ship"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-serif text-lg mb-1 group-hover:text-amber-500 transition-colors">B2B 贸易批发</h4>
+                                    <p class="text-gray-400 text-sm font-light text-justify leading-relaxed">
+                                        提供具有竞争力的 FOB / CIF 集装箱报价。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-zinc-900 border border-white/5 hover:border-amber-600/50 p-6 rounded transition-all duration-300">
+                            <div class="relative z-10 flex items-start gap-5">
+                                <div class="p-3 bg-black rounded text-amber-600 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-gem"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-serif text-lg mb-1 group-hover:text-amber-500 transition-colors">产品私人定制</h4>
+                                    <p class="text-gray-400 text-sm font-light text-justify leading-relaxed">
+                                        支持较小批量起订，提供多样化石材定制服务。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/5 flex justify-end gap-4 items-center">
+                        <span class="text-xs text-gray-500 uppercase tracking-widest mr-2">在线沟通:</span>
+                        
+                        <button onclick="openLightbox('wechatqr.jpeg')" 
+                            class="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500 transition-all group relative" title="扫码添加">
+                            <i class="fa-brands fa-weixin text-lg"></i>
+                            <span class="absolute -top-8 right-0 bg-white text-black text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                点击查看二维码
+                            </span>
+                        </button>
+                        
+                        <a href="https://wa.me/8613609690446" target="_blank" 
+                           class="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500 transition-all group relative" title="WhatsApp 聊天">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span class="absolute -top-8 right-0 bg-white text-black text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">WhatsApp 聊天</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-zinc-950 py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-sm text-zinc-500">
+        <div>
+            <h6 class="text-amber-700 font-bold mb-4 uppercase tracking-wider text-base">关于 RWIStone 瑞石</h6>
+            <p class="leading-relaxed text-justify mb-4">
+                东莞市瑞石石材有限公司 RWIStone 是一家深耕石材行业的综合服务商。我们的核心优势在于<strong>源头掌控</strong>——我们拥有<strong>黑色大理石矿山的独立开采权</strong>及配套加工车间，从荒料开采到成品输出实现全链路自营，确保黑色系石材在价格与品质上的绝对优势。
+            </p>
+            <p class="leading-relaxed text-justify">
+                同时，依托广东的产业集群优势，我们建立了严格的<strong>供应链甄选体系</strong>。针对白色、米黄、灰色、绿色等其他色系石材，我们作为专业的资源整合方，联合优质合作工厂进行协同生产与监管。无论是自有矿山的直供，还是通过强大供应链整合的石材，RWIStone 均提供统一的高标准质检 (QC) 与全球贸易服务。
+            </p>
+        </div>
+
+        <div>
+            <h6 class="text-amber-700 font-bold mb-4 uppercase tracking-wider text-base">热门产品索引</h6>
+            
+            <div class="space-y-3">
+                <div>
+                    <strong class="text-zinc-400 block mb-1">自有矿山直供:</strong>
+                    <p class="leading-relaxed text-xs">
+                        黑色大理石荒料、墨玉大板、黑色大理石工程板、异形加工定制。
+                    </p>
+                </div>
+
+                <div>
+                    <strong class="text-zinc-400 block mb-1">精细石材工艺品:</strong>
+                    <p class="leading-relaxed text-xs">
+                        <strong>餐厨系列：</strong>天然大理石茶叶罐、棉花罐、密封罐、大理石托盘、隔热垫、石材碗具。<br>
+                        <strong>卫浴系列：</strong>大理石卫浴套装、洗手液/乳液瓶、肥皂碟、牙刷架、马桶刷容器。<br>
+                        <strong>文创/办公：</strong>大理石笔筒、名片夹、纸镇、书挡。<br>
+                        <strong>家居饰品：</strong>大理石纸巾盒、花瓶/花盆、香薰底座、烛台、灯饰配件、烟灰缸、垃圾桶。
+                    </p>
+                </div>
+
+                <div>
+                    <strong class="text-zinc-400 block mb-1">板材选型与贸易:</strong>
+                    <p class="leading-relaxed text-xs">
+                        爱马仕灰、爵士白、雪花白、鱼肚白、印度绿、米黄洞石、黑白根等荒料与大板批发 (FOB/CIF Service)。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="font-serif text-xl font-bold tracking-widest text-white uppercase">RWI<span class="text-amber-600">STONE</span></span>
+                <p class="text-gray-600 text-xs mt-2 font-light">Copyright © 2009 RWISTONE Natural Stone Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="product-modal-overlay" class="modal-overlay fixed inset-0 z-[100] bg-black/80 flex items-center justify-center" onclick="closeModal()">
+        <div id="product-modal-content" class="modal-content-area w-full h-full bg-zinc-950 shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+            
+            <div class="flex justify-between items-center py-3 px-6 border-b border-amber-600/30 bg-zinc-900 sticky top-0 z-30">
+                <h3 id="modal-title" class="text-2xl font-serif text-white"></h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-amber-500 transition-colors text-3xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="modal-body" class="overflow-y-auto h-[calc(100vh-80px)] space-y-0">
+                </div>
+        </div>
+    </div>
+
+    <div id="lightbox-overlay" class="fixed inset-0 z-[200] bg-black/95 hidden flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-amber-500 transition-colors z-[210]">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="Enlarged View" class="max-w-full max-h-full object-contain shadow-2xl border border-white/10" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        // --- Modal & Lightbox Logic ---
+        const modalOverlay = document.getElementById('product-modal-overlay');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        
+        // Lightbox Elements
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImage = document.getElementById('lightbox-image');
+
+        // Helper function for placeholder (用于图片加载失败时显示)
+        const defaultPlaceholder = (text) => `https://placehold.co/800x800/18181b/d4af37?text=${text.replace(/ /g, '+')}`;
+        
+        // ===================================================================
+        // 核心数据结构 1: 工艺品图册 (按用户要求分为四大类)
+        // ===================================================================
+        const productCategories = [
+            // -------------------------------------------------------------------
+            // 一级目录: 餐厨用品 (Kitchen and Dining Products)
+            // -------------------------------------------------------------------
+            { 
+                name: "罐系列", 
+                key: "jar",
+                group: "餐厨用品", // 一级分类标识
+                // 此处有 4 个配图
+                products: [
+                    { name: "黑色茶叶罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/teajar1.jpg' },
+                    { name: "米黄棉花罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/cottonjar1.jpg' },
+                    { name: "爵士白棉花罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/cottonjar2.jpg' },
+                    { name: "绿色柱形罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/cylindricaljar1.jpg' },
+                    { name: "米黄细腰型棉花罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/cottonjar3.jpg' },
+                    { name: "米黄柱形罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/cylindricaljar2.jpg' },
+                    { name: "木盖柱形罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/woodencoverjar1.jpg' },
+                    { name: "杂色棉花罐", material: "天然大理石", size: "定制", path: 'images/crafts/jars/multicolorjar1.jpg' }
+                ]
+            },
+            { 
+                name: "厨具系列", 
+                key: "kitchenware",
+                group: "餐厨用品", // 一级分类标识
+                // 此处有 5 个配图 (演示可变数量)
+                products: [
+                    { name: "隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet1.jpg' },
+                    { name: "六边形隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet2.jpg' },
+                    { name: "六边形隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet3.jpg' },
+                    { name: "隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet4.jpg' },
+                    { name: "五边形隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet5.jpg' },
+                    { name: "圆形隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet6.jpg' },
+                    { name: "圆形隔热垫", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/trivet7.jpg' },
+                    { name: "碗", material: "天然大理石", size: "定制", path: 'images/crafts/kitchenware/bowl1.jpg' },
+                ]
+            },
+            { 
+                name: "托盘系列", 
+                key: "tray",
+                group: "餐厨用品", // 一级分类标识
+                // 此处只有 2 个配图 (演示可变数量)
+                products: [
+                    { name: "卡拉圆形托盘", material: "天然大理石", size: "定制", path: 'images/crafts/tray/tray1.jpg' },
+                    { name: "绿石方托盘", material: "天然大理石", size: "定制", path: 'images/crafts/tray/tray2.jpg' },
+                    { name: "绿石圆托盘", material: "天然大理石", size: "定制", path: 'images/crafts/tray/tray3.jpg' },
+                    { name: "双啡托盘", material: "天然大理石", size: "定制", path: 'images/crafts/tray/tray4.jpg' },
+                    { name: "西白圆形托盘", material: "天然大理石", size: "定制", path: 'images/crafts/tray/tray5.jpg' }
+                ]
+            },
+
+            // -------------------------------------------------------------------
+            // 一级目录: 文化用品 (Stationery and Office)
+            // -------------------------------------------------------------------
+            { 
+                name: "笔筒系列", 
+                key: "pen_holder",
+                group: "文化用品", // 一级分类标识
+                products: [
+                    { name: "白石圆台形笔筒", material: "天然大理石", size: "定制", path: 'images/crafts/penholder/penholder1.jpg' },
+                    { name: "白石柱形笔筒", material: "天然大理石", size: "定制", path: 'images/crafts/penholder/penholder2.jpg' },
+                    { name: "黑色大理石柱形笔筒", material: "天然大理石", size: "定制", path: 'images/crafts/penholder/penholder3.jpg' },
+                    { name: "绿石柱形笔筒", material: "天然大理石", size: "定制", path: 'images/crafts/penholder/penholder4.jpg' },
+                    { name: "米黄柱形笔筒", material: "天然大理石", size: "定制", path: 'images/crafts/penholder/penholder5.jpg' }
+                ]
+            },
+            { 
+                name: "名片夹(纸镇)系列", 
+                key: "card_holder",
+                group: "文化用品", // 一级分类标识
+                products: [
+                    { name: "白六边形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder1.jpg' },
+                    { name: "白色半圆名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder2.jpg' },
+                    { name: "白色短六边形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder3.jpg' },
+                    { name: "白色宽槽小号名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder4.jpg' },
+                    { name: "白色宽槽中号名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder5.jpg' },
+                    { name: "白色扁长形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder6.jpg' },
+                    { name: "绿色半圆柱名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder7.jpg' },
+                    { name: "绿色窄槽小号名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder8.jpg' },
+                    { name: "白色鹅卵石形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder9.jpg' },
+                    { name: "黑色斜槽正方形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder10.jpg' },
+                    { name: "绿色长半圆形名片夹", material: "天然大理石", size: "定制", path: 'images/crafts/cardholder/cardholder11.jpg' }
+                ]
+            },
+            { 
+                name: "书挡", 
+                key: "bookend",
+                group: "文化用品", // 一级分类标识
+                products: [
+                    { name: "卡拉拉白中孔书档", material: "天然大理石", size: "定制", path: 'images/crafts/bookend/卡拉拉中孔书档3.jpg' },
+                    { name: "卡拉拉白书档", material: "天然大理石", size: "定制", path: 'images/crafts/bookend/卡拉拉书档7.jpg' }
+                ]
+            },
+
+            // -------------------------------------------------------------------
+            // 一级目录: 卫浴用品 (Bathroom Products)
+            // -------------------------------------------------------------------
+            { 
+                name: "皂碟系列", 
+                key: "soap_dish",
+                group: "卫浴用品", // 一级分类标识
+                products: [
+                    { name: "广西白圆形碎边香皂碟 ", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/白石圆形碎边香皂碟 (1).jpg' },
+                    { name: "广西白肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/广西白肥皂碟1.jpg' },
+                    { name: "爵士白方肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/爵士白方肥皂碟 (2).jpg' },
+                    { name: "白圆肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/白云圆肥皂碟5.jpg' },
+                    { name: "啡米黄扁皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/啡米黄扁皂碟 (2).jpg' },
+                    { name: "黑方凹底皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/黑方凹底皂碟1 (白底).jpg' },
+                    { name: "黑白拼色肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/黑白拼色肥皂碟 (2).jpg' },
+                    { name: "古木纹圆皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/古木纹圆皂碟 (6).jpg' },
+                    { name: "黑洞石圆皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/黑洞石圆皂碟 (2).jpg' },
+                    { name: "雪花白弧底圆皂碟 ", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/雪花白弧底圆皂碟 (4).jpg' },
+                    { name: "黑石肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/黑石肥皂碟2-200K.jpg' },
+                    { name: "黑圆肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/黑圆肥皂碟1.jpg' },
+                    { name: "绿石肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/绿石肥皂碟 (3).jpg' },
+                    { name: "米黄洞石肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/米黄洞石肥皂碟 (2).jpg' },
+                    { name: "米黄细腰皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/米黄细腰皂碟.jpg' },
+                    { name: "米黄玉肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/米黄玉肥皂碟1.jpg' },
+                    { name: "爵白圆形肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/爵白圆形肥皂碟1.jpg' },
+                    { name: "浅啡有脚肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/浅啡有脚肥皂碟 (2).jpg' },
+                    { name: "米黄洞肥皂圆碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/米黄洞肥皂圆碟1.jpg' },
+                    { name: "浅卡布其肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/浅卡布其肥皂碟 (1).jpg' },
+                    { name: "青灰色皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/青灰色皂碟 (4).jpg' },
+                    { name: "深浅啡双拼肥皂碟", material: "天然大理石", size: "定制", path: 'images/crafts/soapdish/深浅卡布其肥皂碟 (1).jpg' }
+                ]
+            },
+            { 
+                name: "马桶刷容器", 
+                key: "brush_holder",
+                group: "卫浴用品", // 一级分类标识
+                products: [
+                    { name: "广西白鼓形马桶刷容器", material: "天然大理石", size: "定制", path: 'images/crafts/brushholder/广西白鼓形马桶刷 (2).jpg' },
+                    { name: "米黄细腰马桶刷容器", material: "天然大理石", size: "定制", path: 'images/crafts/brushholder/米黄细腰马桶刷 (1).jpg' }
+                ]
+            },
+            { 
+                name: "牙刷架系列", 
+                key: "toothbrush",
+                group: "卫浴用品", // 一级分类标识
+                products: [
+                    { name: "爵士白长方牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/白长方牙架 (1).jpg' },
+                    { name: "啡米黄扁牙刷架 ", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/啡米黄扁牙刷架 (5).jpg' },
+                    { name: "黑白牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/黑白牙刷架2.jpg' },
+                    { name: "黑洞石圆牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/黑洞石圆牙刷架 (1).jpg' },
+                    { name: "黑石长方牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/黑理石牙刷方架  (2).jpg' },
+                    { name: "黑石台形牙刷架 ", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/黑石牙刷架0.jpg' },
+                    { name: "进口米黄牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/进口米黄牙刷架 (1).jpg' },
+                    { name: "爵士白圆台牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/爵白圆牙刷架.jpg' },
+                    { name: "爵士白牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/爵士白牙刷架 (2).jpg' },
+                    { name: "卡布其色牙刷架 ", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/卡布其色牙刷架 (1).jpg' },
+                    { name: "绿石牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/绿石圆牙刷架 (2).jpg' },
+                    { name: "米黄玉牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/米黄玉牙刷架 (1).jpg' },
+                    { name: "墨玉方牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/墨玉牙刷架方.jpg' },
+                    { name: "黑石圆牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/黑石圆牙刷架.jpg' },
+                    { name: "白石圆牙刷架", material: "天然大理石", size: "定制", path: 'images/crafts/toothbrush/牙刷架白石1.jpg' }
+                ]
+            },
+            { 
+                name: "乳液瓶系列", 
+                key: "lotion",
+                group: "卫浴用品", // 一级分类标识
+                products: [
+                    { name: "爵士白乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/爵士乳液瓶2.jpg' },
+                    { name: "黑石乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑石乳液瓶2.jpg' },
+                    { name: "古木纹乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/古木纹乳液瓶 (2).jpg' },
+                    { name: "黑白根柱形乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑白根圆柱乳液瓶  (1).jpg' },
+                    { name: "黑白配分装瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑白配分装瓶 (2).jpg' },
+                    { name: "黑白配圆腰分装瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑白配圆腰分装瓶 (2).jpg' },
+                    { name: "七彩白乳液方瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/七彩白乳液方瓶5.jpg' },
+                    { name: "啡米黄扁乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/啡米黄扁乳液瓶 (5).jpg' },
+                    { name: "爵士白拉槽乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/爵士白拉槽乳液瓶 (1).jpg' },
+                    { name: "进口米黄乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/进口米黄乳液瓶 (3).jpg' },
+                    { name: "爵士白矮乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/爵士白矮乳液瓶.jpg' },
+                    { name: "木纹玉乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/木纹玉乳液瓶  (5).jpg' },
+                    { name: "卡布其色乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/卡布其色乳液瓶 (3).jpg' },
+                    { name: "绿鼓腰乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/绿鼓腰乳液瓶 (2).jpg' },
+                    { name: "白石细圆乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/白石细圆乳液瓶.jpg' },
+                    { name: "啡色乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/啡色乳液瓶1 (2).jpg' },
+                    { name: "广西白鼓形乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/广西白鼓形乳液瓶 (2).jpg' },
+                    { name: "双啡鼓腰乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/双啡鼓腰乳液瓶 (1).jpg' },
+                    { name: "绿石圆乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/绿石圆乳液瓶 (2).jpg' },
+                    { name: "黑洞石圆乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑白乳液瓶1.jpg' },
+                    { name: "黑洞石圆乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑洞石圆乳液瓶 (1).jpg' },
+                    { name: "黑石多面底乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黑石多面底乳液瓶.jpg' },
+                    { name: "黄洞石圆柱乳瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/黄洞石圆柱乳瓶 (3).jpg' },
+                    { name: "爵士白圆倒底乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/爵士白圆倒底乳液瓶 (1).jpg' },
+                    { name: "卡布其色矮乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/卡布其色矮乳液瓶 (1).jpg' },
+                    { name: "米黄石圆形乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/米黄石圆形乳液瓶 (2).jpg' },
+                    { name: "米黄细腰乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/米黄细腰乳液瓶 (2).jpg' },
+                    { name: "米黄多面底乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/米黄多面底乳液瓶.jpg' },
+                    { name: "青灰色圆锥乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/青灰色圆锥乳液瓶 (2).jpg' },
+                    { name: "广西白乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/乳液瓶白石1.jpg' },
+                    { name: "米黄乳液瓶", material: "天然大理石", size: "定制", path: 'images/crafts/lotion/乳液瓶米黄3 (1).jpg' }
+                ]
+            },
+            { 
+                name: "套装", 
+                key: "collection",
+                group: "卫浴用品", // 一级分类标识
+                products: [
+                    { name: "卡拉拉白方6件", material: "天然大理石", size: "定制", path: 'images/crafts/collection/白方6件 (4).jpg' },
+                    { name: "古木纹全套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/古木纹全套 (1).jpg' },
+                    { name: "黑白根方5件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/黑方5件套 (1).jpg' },
+                    { name: "黑白根圆托5件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/黑圆托5件套 (2).jpg' },
+                    { name: "爵士白六件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/爵士白六件套 (1).jpg' },
+                    { name: "绿方4件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/绿方4件套 (1).jpg' },
+                    { name: "绿圆托椭皂5件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/绿圆托椭皂5件套 (2).jpg' },
+                    { name: "双拼色5件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/双拼色5件套 (2).jpg' },
+                    { name: "雪花白圆4件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/雪花白圆4件套 (1).jpg' },
+                    { name: "中花白圆托4件套", material: "天然大理石", size: "定制", path: 'images/crafts/collection/中花白圆托4件套 (3).jpg' }
+                ]
+            },
+            
+            // -------------------------------------------------------------------
+            // 一级目录: 家居用品 (Furniture and Decor)
+            // -------------------------------------------------------------------
+            { 
+                name: "纸巾盒系列", 
+                key: "tissue",
+                group: "家居用品", // 一级分类标识
+                products: [
+                    { name: "卡拉拉白方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/白方纸巾盒（透明底） (1).jpg' },
+                    { name: "卡拉拉白擦手纸盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/纸巾盒250（1）.jpg' },
+                    { name: "古木纹正方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/古木纹正方纸巾盒  (3).jpg' },
+                    { name: "黑白根长方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/黑白根长方纸巾盒 (2).jpg' },
+                    { name: "黑白根纸巾筒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/黑白根纸巾筒6.jpg' },
+                    { name: "黑白配正方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/黑白配正方纸巾盒  (1).jpg' },
+                    { name: "黑白双色正方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/黑白双色正方纸巾盒 (3).jpg' },
+                    { name: "黑石纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/黑石纸巾盒 (1).jpg' },
+                    { name: "进口米黄纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/进口米黄纸巾盒 (7).jpg' },
+                    { name: "爵白正方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/爵白正方纸巾盒 (2).jpg' },
+                    { name: "卡布其色纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/卡布其色纸巾盒 (3).jpg' },
+                    { name: "绿正方纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/绿正方纸巾盒 (3).jpg' },
+                    { name: "长方爵士白纸巾盒", material: "天然大理石", size: "定制", path: 'images/crafts/tissue/长方爵士白纸巾盒 (2).jpg' }
+                ]
+            },
+            { 
+                name: "花器系列", 
+                key: "pot_vase",
+                group: "家居用品", // 一级分类标识
+                products: [
+                    { name: "黑白双色花瓶", material: "天然大理石", size: "定制", path: 'images/crafts/vase/黑白双色花瓶 (3).jpg' },
+                    { name: "爵士白方形花盆", material: "天然大理石", size: "定制", path: 'images/crafts/vase/爵士白方形花盆.jpg' },
+                    { name: "白色花瓶", material: "天然大理石", size: "定制", path: 'images/crafts/vase/白色花瓶 (1).jpg' },
+                    { name: "圆台形花瓶", material: "天然大理石", size: "定制", path: 'images/crafts/vase/黑圆台形花瓶.jpg' },
+                    { name: "黑白根圆形花瓶", material: "天然大理石", size: "定制", path: 'images/crafts/vase/黑白根圆形花瓶.jpeg' },
+                    { name: "黑白根圆形花瓶1", material: "天然大理石", size: "定制", path: 'images/crafts/vase/黑白根圆形花瓶1.jpeg' }
+                ]
+            },
+            { 
+                name: "灯饰配件系列", 
+                key: "lighting",
+                group: "家居用品", // 一级分类标识
+                products: [
+                    { name: "广西白灯罩", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/白石灯罩1.jpg' },
+                    { name: "广西白灯照(点亮)", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/白石灯罩6.jpg' },
+                    { name: "米黄玉灯罩", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/米黄玉圆柱5.jpg' },
+                    { name: "米黄玉灯罩(点亮)", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/米黄玉 (3).jpg' },
+                    { name: "白烛台", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/白烛台3.jpg' },
+                    { name: "黑烛台", material: "天然大理石", size: "定制", path: 'images/crafts/lighting/烛台黑1.jpg' }
+                ]
+            },
+            { 
+                name: "垃圾桶系列", 
+                key: "waste_bin",
+                group: "家居用品", // 一级分类标识
+                products: [
+                    { name: "卡拉拉白垃圾桶", material: "天然大理石", size: "定制", path: 'images/crafts/wastebin/白色垃圾桶 (2).jpg' },
+                    { name: "黑白垃圾桶", material: "天然大理石", size: "定制", path: 'images/crafts/wastebin/黑白垃圾桶1.jpg' },
+                    { name: "黑木纹垃圾桶", material: "天然大理石", size: "定制", path: 'images/crafts/wastebin/黑木纹垃圾桶  (1).jpg' },
+                    { name: "进口米黄垃圾桶", material: "天然大理石", size: "定制", path: 'images/crafts/wastebin/进口米黄垃圾桶 (3).jpg' },
+                    { name: "绿石垃圾桶", material: "天然大理石", size: "定制", path: 'images/crafts/wastebin/绿石垃圾桶 (4).jpg' }
+                                    ]
+            },
+            { 
+                name: "烟灰缸系列", 
+                key: "ashtray",
+                group: "家居用品", // 一级分类标识
+                products: [
+                    { name: "卡拉拉白烟灰缸", material: "天然大理石", size: "定制", path: 'images/crafts/ashtray/白色烟灰缸 (2).jpg' },
+                    { name: "黑石方形烟灰缸", material: "天然大理石", size: "定制", path: 'images/crafts/ashtray/黑石方形烟灰缸6.jpg' },
+                    { name: "黑石圆形烟灰缸", material: "天然大理石", size: "定制", path: 'images/crafts/ashtray/黑石圆形烟灰缸1.jpg' },
+                    { name: "卡拉拉白变形烟灰缸", material: "天然大理石", size: "定制", path: 'images/crafts/ashtray/卡拉拉白变形烟缸 (2).jpg' }
+                ]
+            }
+        ];
+
+        // Grouping and initial state for Crafts Modal
+        const groupedProducts = {};
+        const primaryCategoryList = [];
+        productCategories.forEach(cat => {
+            if (!groupedProducts[cat.group]) {
+                groupedProducts[cat.group] = [];
+                primaryCategoryList.push(cat.group);
+            }
+            groupedProducts[cat.group].push(cat);
+        });
+
+        let currentPrimaryCategory = primaryCategoryList[0];
+        let currentSubCategoryKey = groupedProducts[currentPrimaryCategory][0].key;
+
+
+        // ===================================================================
+        // 核心数据结构 2: 建材选型 (查看选材) - 现为结构化数据
+        // ===================================================================
+        const rawMaterialData = [
+            // group: 颜色系列, key: 唯一标识
+            { group: '板材', key: 'Hermes Grey', name: '爱马仕灰', en: 'Hermes Grey', material: '进口天然大理石', color: '灰色纹理', size: '280cm x 160cm (大板)', finish: '抛光', thumb: 'images/materials/爱马仕灰.jpeg', full: 'images/materials/爱马仕灰.jpeg', fallbackColor: 'e5e5e5' },
+            { group: '板材', key: 'Snow White Marble', name: '雪花白', en: 'Snow White Marble', material: '进口天然大理石', color: '白灰色纹理', size: '定制异形', finish: '抛光', thumb: 'images/materials/雪花白.jpeg', full: 'images/materials/雪花白.jpeg', fallbackColor: 'f5f5f5' },
+            { group: '板材', key: 'Fish Belly White', name: '鱼肚白', en: 'Fish Belly White', material: '进口天然大理石', color: '白色/灰色纹理', size: '280cm x 160cm (大板)', finish: '抛光', thumb: 'images/materials/鱼肚白.jpeg', full: 'images/materials/鱼肚白.jpeg', fallbackColor: 'e5e5e5' },
+            { group: '板材', key: 'Sandstone', name: '沙岩', en: 'Sandstone', material: '进口天然大理石', color: '黄色纹理', size: '定制异形', finish: '抛光', thumb: 'images/materials/沙岩.jpeg', full: 'images/materials/沙岩.jpeg', fallbackColor: 'f5f5f5' },
+            { group: '板材', key: 'Jazz White Marble', name: '爵士白', en: 'Jazz White Marble', material: '进口天然大理石', color: '白色纹理', size: '280cm x 160cm (大板)', finish: '抛光', thumb: 'images/materials/爵士白.jpeg', full: 'images/materials/爵士白.jpeg', fallbackColor: 'e5e5e5' },
+            { group: '板材', key: 'Black Jade Marble', name: '墨玉', en: 'Black Jade Marble', material: '进口天然大理石', color: '纯黑', size: '定制异形', finish: '抛光', thumb: 'images/materials/墨玉.jpeg', full: 'images/materials/墨玉.jpeg', fallbackColor: 'f5f5f5' },
+
+            { group: '荒料', key: 'Black Marble', name: '墨玉荒料', en: 'Black Marble', material: '黑色大理石', color: '纯黑', size: '250cm x 150cm (特板)', finish: '抛光', thumb: 'images/materials/荒料.jpeg', full: 'images/materials/荒料.jpeg', fallbackColor: '3b82f6' }
+        ];
+
+        // Grouping for Materials Modal
+        const materialGroups = {}; // { '白色系列': [mat1, mat2], '深色系列': [mat3], ... }
+        const materialPrimaryCategoryList = []; // ['白色系列', '深色系列', ...]
+        rawMaterialData.forEach(mat => {
+            if (!materialGroups[mat.group]) {
+                materialGroups[mat.group] = [];
+                materialPrimaryCategoryList.push(mat.group);
+            }
+            materialGroups[mat.group].push(mat);
+        });
+
+        let currentMaterialPrimaryCategory = materialPrimaryCategoryList[0];
+        let currentSubMaterialKey = materialGroups[currentMaterialPrimaryCategory][0].key;
+
+
+        // ===================================================================
+        // Modal 主控函数
+        // ===================================================================
+        function openModal(type) {
+            if (type === 'crafts') {
+                renderCraftsModalContent();
+            } else if (type === 'materials') {
+                renderMaterialsModalContent();
+            }
+            
+            modalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        }
+
+        // ===================================================================
+        // 工艺品: 动态导航逻辑 (已修改为点击触发)
+        // ===================================================================
+        // 渲染整个工艺品模态内容 (包含菜单结构)
+        function renderCraftsModalContent() {
+            modalTitle.textContent = "工艺品定制图册";
+            // 1. 设置静态容器和初始内容
+            modalBody.innerHTML = `
+                <div class="h-full flex flex-col w-full relative">
+                    <div id="primary-menu" class="flex-shrink-0 w-full flex justify-start bg-zinc-950 sticky top-0 z-20 overflow-x-auto whitespace-nowrap scrollbar-hide border-b border-white/5"> 
+                    </div>
+                    
+                    <div id="sub-menu-container" class="flex-shrink-0 w-full bg-zinc-950 sticky top-[53px] z-10 overflow-x-auto whitespace-nowrap">
+                        <div id="sub-menu" class="flex space-x-4 px-4 lg:px-8 py-4">
+                        </div>
+                    </div>
+                    
+                    <div id="content-area" class="py-8 px-4 lg:px-8 flex-grow">
+                        </div>
+                </div>
+            `;
+
+            const primaryMenu = document.getElementById('primary-menu');
+            // 2. 渲染一级目录菜单 (注意：这里由 onmouseover 改为了 onclick)
+            primaryMenu.innerHTML = primaryCategoryList.map(group => `
+                <button data-key="${group}" 
+                    class="primary-category-btn flex-shrink-0 px-6 py-4 text-sm font-medium uppercase tracking-wider transition-colors duration-200 border-b-2 ${group === currentPrimaryCategory ? 'text-amber-500 border-amber-500' : 'text-gray-400 border-transparent hover:text-white hover:border-white/50'}"
+                    onclick="handlePrimaryCategoryClick('${group}')"
+                >
+                    ${group}
+                </button>
+            `).join('');
+
+            // 3. 初始渲染默认分类和产品 (isInitialLoad = true)
+            handlePrimaryCategoryClick(currentPrimaryCategory, true);
+        }
+
+        // 处理一级目录点击事件 (原 Hover)
+        function handlePrimaryCategoryClick(groupKey, isInitialLoad = false) {
+            const primaryMenu = document.getElementById('primary-menu');
+            if (!primaryMenu) return;
+
+            // 1. 更新一级目录按钮的选中状态
+            document.querySelectorAll('.primary-category-btn').forEach(btn => {
+                btn.classList.remove('text-amber-500', 'border-amber-500');
+                btn.classList.add('text-gray-400', 'border-transparent', 'hover:text-white', 'hover:border-white/50');
+            });
+            const activeBtn = primaryMenu.querySelector(`[data-key="${groupKey}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('text-amber-500', 'border-amber-500');
+                activeBtn.classList.remove('text-gray-400', 'border-transparent', 'hover:text-white', 'hover:border-white/50');
+            }
+            
+            currentPrimaryCategory = groupKey;
+            const subCategories = groupedProducts[groupKey];
+
+            // 2. 渲染二级产品菜单
+            renderSubCategoryMenu(subCategories);
+
+            // 3. 切换主分类时，默认显示第一个子分类的内容
+            if (subCategories && subCategories.length > 0) {
+                const initialSubKey = subCategories[0].key;
+                currentSubCategoryKey = initialSubKey;
+                handleSubCategoryClick(initialSubKey, isInitialLoad);
+            }
+        }
+
+        // 渲染二级产品菜单
+        function renderSubCategoryMenu(subCategories) {
+            const subMenu = document.getElementById('sub-menu');
+            if (!subMenu) return;
+
+            // 清空并渲染新的二级菜单 (注意：这里由 onmouseover 改为了 onclick)
+            subMenu.innerHTML = subCategories.map(cat => `
+                <button data-key="${cat.key}" 
+                    class="sub-category-btn flex-shrink-0 px-3 py-1 text-xs uppercase tracking-wider rounded-full transition-all duration-200 hover:bg-amber-600 hover:text-black bg-zinc-800 text-gray-300"
+                    onclick="handleSubCategoryClick('${cat.key}')"
+                >
+                    ${cat.name}
+                </button>
+            `).join('');
+
+            // 设置初始选中项样式
+            const initialSubKey = currentSubCategoryKey;
+            const initialBtn = subMenu.querySelector(`[data-key="${initialSubKey}"]`);
+            if(initialBtn) {
+                initialBtn.classList.add('bg-amber-600', 'text-black');
+                initialBtn.classList.remove('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            }
+        }
+
+        // 处理二级产品点击事件 (原 Hover)
+        function handleSubCategoryClick(categoryKey, isInitialLoad = false) {
+            const subMenu = document.getElementById('sub-menu');
+            if (!subMenu) return;
+
+            // 1. 更新二级目录按钮的选中状态
+            document.querySelectorAll('#sub-menu .sub-category-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-600', 'text-black');
+                btn.classList.add('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            });
+            const activeBtn = subMenu.querySelector(`[data-key="${categoryKey}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-amber-600', 'text-black');
+                activeBtn.classList.remove('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            }
+
+            currentSubCategoryKey = categoryKey;
+            
+            // 2. 查找数据
+            let productData = null;
+            for (const groupKey in groupedProducts) {
+                productData = groupedProducts[groupKey].find(cat => cat.key === categoryKey);
+                if (productData) break;
+            }
+
+            // 3. 渲染内容
+            if (productData) {
+                renderProductContent(productData, isInitialLoad);
+            }
+        }
+
+        // 渲染产品内容 (修改版：去掉了颜色和工艺的显示)
+        function renderProductContent(productData, isInitialLoad) {
+            const contentArea = document.getElementById('content-area');
+            if (!contentArea) return;
+
+            const fadeClass = isInitialLoad ? '' : 'animate-fade-in-up';
+            let html = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">`;
+            const products = productData.products || [];
+            products.forEach((product, index) => {
+                const imgSrc = product.path;
+                const imgFallback = defaultPlaceholder(product.name);
+                html += `
+                    <div class="group/item rounded-lg overflow-hidden bg-zinc-900 p-3 shadow-lg hover:shadow-2xl transition-all duration-300 ${fadeClass}" style="animation-delay: ${index * 0.1}s;">
+                        <div class="aspect-square overflow-hidden relative cursor-zoom-in" onclick="openLightbox('${imgSrc || imgFallback}')">
+                            <img src="${imgSrc}" onerror="this.onerror=null; this.src='${imgFallback}';" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-105" 
+                                alt="${product.name}">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-white font-serif text-xs border border-white/30 px-3 py-1 bg-black/30 backdrop-blur-sm">
+                                    <i class="fa-solid fa-magnifying-glass mr-2"></i>点击放大
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-3 text-xs space-y-1">
+                            <p class="text-white font-bold mb-2">${product.name}</p>
+                            <p class="text-gray-400"><strong class="text-amber-500">材质:</strong> ${product.material}</p>
+                            <p class="text-gray-400"><strong class="text-amber-500">尺寸:</strong> ${product.size}</p>
+                        </div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+            contentArea.innerHTML = html;
+        }
+
+        // ===================================================================
+        // 建材: 动态导航逻辑 (已修改为点击触发)
+        // ===================================================================
+        // 渲染整个建材模态内容
+        function renderMaterialsModalContent() {
+            modalTitle.textContent = "板材荒料选型 (slabs&blocks)";
+            
+            modalBody.innerHTML = `
+                <div class="h-full flex flex-col w-full relative">
+                    
+                    <div id="material-primary-menu" class="flex-shrink-0 w-full flex justify-start bg-zinc-950 sticky top-0 z-20 overflow-x-auto whitespace-nowrap border-b border-white/5">
+                    </div>
+
+                    <div id="material-sub-menu-container" class="flex-shrink-0 w-full bg-zinc-950 sticky top-[55px] z-10 overflow-x-auto whitespace-nowrap">
+                        <div id="material-sub-menu" class="flex space-x-4 px-4 lg:px-8 py-4">
+                        </div>
+                    </div>
+
+                    <div id="material-content-area" class="py-8 px-4 lg:px-8 flex-grow overflow-y-auto">
+                        <p class="text-gray-400 mb-8 font-light">
+                            请点击上方**一级目录**或**二级材料项**，以查看详情。
+                            <br>
+                            <span class="text-xs text-amber-600">* Click on the menu items above to display content.</span>
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            const primaryMenu = document.getElementById('material-primary-menu');
+
+            // 渲染一级目录 (注意：这里由 onmouseover 改为了 onclick)
+            primaryMenu.innerHTML = materialPrimaryCategoryList.map(group => `
+                <button data-key="${group}" 
+                    class="material-primary-btn flex-shrink-0 px-6 py-4 text-sm font-medium uppercase tracking-wider transition-colors duration-200 border-b-2 ${group === currentMaterialPrimaryCategory ? 'text-amber-500 border-amber-500' : 'text-gray-400 border-transparent hover:text-white hover:border-white/50'}"
+                    onclick="handlePrimaryMaterialClick('${group}')"
+                >
+                    ${group}
+                </button>
+            `).join('');
+
+            // 初始渲染
+            handlePrimaryMaterialClick(currentMaterialPrimaryCategory, true);
+        }
+
+        // 处理一级目录点击事件 (建材)
+        function handlePrimaryMaterialClick(groupKey, isInitialLoad = false) {
+            const primaryMenu = document.getElementById('material-primary-menu');
+            if (!primaryMenu) return;
+
+            document.querySelectorAll('.material-primary-btn').forEach(btn => {
+                btn.classList.remove('text-amber-500', 'border-amber-500');
+                btn.classList.add('text-gray-400', 'border-transparent', 'hover:text-white', 'hover:border-white/50');
+            });
+            const activeBtn = primaryMenu.querySelector(`[data-key="${groupKey}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('text-amber-500', 'border-amber-500');
+                activeBtn.classList.remove('text-gray-400', 'border-transparent', 'hover:text-white', 'hover:border-white/50');
+            }
+
+            currentMaterialPrimaryCategory = groupKey;
+            const subMaterials = materialGroups[groupKey];
+
+            // 渲染二级菜单
+            renderSubMaterialMenu(subMaterials);
+
+            // 默认显示第一个子项
+            if (subMaterials && subMaterials.length > 0) {
+                const initialSubKey = subMaterials[0].key;
+                currentSubMaterialKey = initialSubKey;
+                handleSubMaterialClick(initialSubKey, isInitialLoad);
+            }
+        }
+
+        // 渲染二级产品菜单 (建材)
+        function renderSubMaterialMenu(subMaterials) {
+            const subMenu = document.getElementById('material-sub-menu');
+            if (!subMenu) return;
+
+            // (注意：这里由 onmouseover 改为了 onclick)
+            subMenu.innerHTML = subMaterials.map(mat => `
+                <button data-key="${mat.key}" 
+                    class="material-sub-btn flex-shrink-0 px-3 py-1 text-xs uppercase tracking-wider rounded-full transition-all duration-200 hover:bg-amber-600 hover:text-black bg-zinc-800 text-gray-300"
+                    onclick="handleSubMaterialClick('${mat.key}')"
+                >
+                    ${mat.name}
+                </button>
+            `).join('');
+
+            // 初始样式
+            const initialSubKey = currentSubMaterialKey;
+            const initialBtn = subMenu.querySelector(`[data-key="${initialSubKey}"]`);
+            if(initialBtn) {
+                initialBtn.classList.add('bg-amber-600', 'text-black');
+                initialBtn.classList.remove('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            }
+        }
+
+        // 处理二级产品点击事件 (建材)
+        function handleSubMaterialClick(materialKey, isInitialLoad = false) {
+            const subMenu = document.getElementById('material-sub-menu');
+            if (!subMenu) return;
+
+            document.querySelectorAll('#material-sub-menu .material-sub-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-600', 'text-black');
+                btn.classList.add('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            });
+            const activeBtn = subMenu.querySelector(`[data-key="${materialKey}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-amber-600', 'text-black');
+                activeBtn.classList.remove('bg-zinc-800', 'text-gray-300', 'hover:bg-amber-600', 'hover:text-black');
+            }
+
+            currentSubMaterialKey = materialKey;
+            const selectedMaterial = rawMaterialData.find(mat => mat.key === materialKey);
+
+            if (selectedMaterial) {
+                renderMaterialContent(selectedMaterial, isInitialLoad);
+            }
+        }
+        
+        // 渲染石材详情 (1张大图 + 介绍)
+        function renderMaterialContent(materialData, isInitialLoad) {
+            const contentArea = document.getElementById('material-content-area');
+            if (!contentArea) return;
+
+            const fadeClass = isInitialLoad ? '' : 'animate-fade-in-up';
+
+            // 为背景图提供一个简单的占位符
+            const fullImgFallback = defaultPlaceholder(materialData.name + ' Full Slab');
+
+            contentArea.innerHTML = `
+                <div class="flex flex-col lg:flex-row gap-8 ${fadeClass}">
+                    <div class="lg:w-1/2 relative group bg-zinc-900 p-4 rounded-lg shadow-xl">
+                        <div class="aspect-video lg:aspect-square overflow-hidden cursor-zoom-in" onclick="openLightbox('${materialData.full || fullImgFallback}')">
+                            <img src="${materialData.full}" 
+                                onerror="this.onerror=null; this.src='${fullImgFallback}'; this.style.backgroundColor='#${materialData.fallbackColor || '18181b'}';"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                                alt="${materialData.name}">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-white font-serif text-xs border border-white/30 px-3 py-1 bg-black/30 backdrop-blur-sm">
+                                    <i class="fa-solid fa-magnifying-glass mr-2"></i>点击放大
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-lg font-serif text-white">${materialData.name}</span>
+                            <span class="text-xs text-amber-500 uppercase tracking-widest">${materialData.group}</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 pt-4">
+                        <h4 class="text-4xl font-serif text-white mb-6">${materialData.name}</h4>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div class="border-b border-white/5 pb-2">
+                                <p class="text-gray-400 font-light"><strong class="text-amber-500 w-20 inline-block">英文名:</strong> ${materialData.en}</p>
+                            </div>
+                            <div class="border-b border-white/5 pb-2">
+                                <p class="text-gray-400 font-light"><strong class="text-amber-500 w-20 inline-block">材质:</strong> ${materialData.material}</p>
+                            </div>
+                            <div class="border-b border-white/5 pb-2">
+                                <p class="text-gray-400 font-light"><strong class="text-amber-500 w-20 inline-block">主要颜色:</strong> ${materialData.color}</p>
+                            </div>
+                            <div class="border-b border-white/5 pb-2">
+                                <p class="text-gray-400 font-light"><strong class="text-amber-500 w-20 inline-block">常用规格:</strong> ${materialData.size}</p>
+                            </div>
+                            <div class="border-b border-white/5 pb-2">
+                                <p class="text-gray-400 font-light"><strong class="text-amber-500 w-20 inline-block">表面工艺:</strong> ${materialData.finish}</p>
+                            </div>
+                        </div>
+
+                        <p class="mt-8 text-gray-500 text-sm italic leading-relaxed">
+                            * 此为精选石材的典型案例图片，实际供货以矿口批次为准，请联系客服获取最新荒料/大板照片。
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ===================================================================
+        // 通用功能
+        // ===================================================================
+        function openLightbox(src) {
+            lightboxImage.src = src;
+            lightboxOverlay.classList.remove('hidden');
+            lightboxOverlay.classList.add('flex', 'opacity-0');
+            // 强制回流以确保opacity过渡生效
+            void lightboxOverlay.offsetWidth;
+            lightboxOverlay.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxOverlay.classList.remove('opacity-100');
+            lightboxOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                lightboxOverlay.classList.remove('flex', 'opacity-0');
+                lightboxOverlay.classList.add('hidden');
+            }, 300); // 匹配 CSS transition duration
+            
+            // 恢复背景滚动，如果 Modal 已关闭
+            if (!modalOverlay.classList.contains('open')) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto'; 
+            // 清空内容，释放内存
+            modalBody.innerHTML = '';
+            modalTitle.textContent = '';
+
+             // 滚动到顶部
+            const modalContentArea = document.getElementById('product-modal-content');
+            if (modalContentArea) {
+                modalContentArea.querySelector('#modal-body').scrollTo(0, 0);
+            }
+        }
+
+        // 监听 ESC 键关闭 Modal/Lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (lightboxOverlay.classList.contains('flex')) {
+                    closeLightbox();
+                } else if (modalOverlay.classList.contains('open')) {
+                    closeModal();
+                }
+            }
+        });
+
+
+        // --- Gallery Carousel Logic (Original Logic) ---
+        const carousel = document.getElementById('gallery-carousel');
+        const toggleBtn = document.getElementById('gallery-toggle-btn');
+        const icon = document.getElementById('gallery-icon');
+        let currentPage = 1; // 当前页码
+
+        function toggleCasePage() {
+            const totalPages = 2; // 假设只有两页
+            if (currentPage < totalPages) {
+                currentPage++;
+            } else {
+                currentPage = 1;
+            }
+
+            // 计算滚动距离: 视口宽度 * (页码 - 1)
+            const scrollDistance = (currentPage - 1) * carousel.offsetWidth;
+            
+            carousel.scrollTo({
+                left: scrollDistance,
+                behavior: 'smooth'
+            });
+
+            // 更新按钮图标
+            if (currentPage === totalPages) {
+                icon.classList.remove('fa-angle-right');
+                icon.classList.add('fa-angle-left');
+            } else {
+                icon.classList.remove('fa-angle-left');
+                icon.classList.add('fa-angle-right');
+            }
+        }
+
+        // 确保 DOM 加载完毕后执行
+        const setupGalleryCarousel = () => {
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', toggleCasePage);
+            }
+            if (carousel) {
+                // 监听滚动结束，手动更新 currentPage (以应对用户拖动滚动条)
+                carousel.addEventListener('scroll', () => {
+                    const scrollPosition = carousel.scrollLeft;
+                    const pageWidth = carousel.offsetWidth;
+                    const pageIndex = Math.round(scrollPosition / pageWidth);
+                    
+                    if (pageIndex + 1 !== currentPage) {
+                        currentPage = pageIndex + 1;
+                        // 滚动结束后更新图标
+                        if (currentPage === 2) {
+                            icon.classList.remove('fa-angle-right');
+                            icon.classList.add('fa-angle-left');
+                        } else {
+                            icon.classList.remove('fa-angle-left');
+                            icon.classList.add('fa-angle-right');
+                        }
+                    }
+                }, { passive: true });
+            }
+        };
+
+        window.addEventListener('load', setupGalleryCarousel);
+
+
+        // --- Navbar & Mobile Menu (Original Logic) ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95', 'shadow-lg', 'py-2');
+                navbar.classList.remove('bg-black/80', 'py-4');
+            } else {
+                navbar.classList.remove('bg-black/95', 'shadow-lg', 'py-2');
+                navbar.classList.add('bg-black/80', 'py-4');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+    </script>
+</body>
+</html>
